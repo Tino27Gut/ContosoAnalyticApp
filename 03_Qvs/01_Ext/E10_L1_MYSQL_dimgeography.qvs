@@ -1,0 +1,18 @@
+Set vQvd_Nombre = L1_MYSQL_dimgeography;
+
+[$(vQvd_Nombre)]:
+SELECT GeographyKey,
+	GeographyTypeKey,
+	GeographyType,
+	ContinentName,
+	CityName,
+	StateProvinceName,
+	RegionCountryName,
+	Geometry,
+	ETLLoadID,
+	LoadDate,
+	UpdateDate
+FROM spanish.dimgeography;
+
+Store [$(vQvd_Nombre)] into [$(vR_QvdExt)$(vQvd_Nombre).qvd] (qvd);
+Drop Table [$(vQvd_Nombre)];

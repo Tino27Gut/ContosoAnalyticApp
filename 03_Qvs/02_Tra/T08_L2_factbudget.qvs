@@ -1,0 +1,34 @@
+Set vQvd_Nombre = L2_factBudget;
+
+Tbl_Tmp1:
+CrossTable(DateKey, BudgetAmount, 3)
+LOAD
+    *
+FROM [$(vR_QvdExt)L1_XLSX_FactBudget.qvd] (qvd);
+
+
+/*-----------------------------------------*/
+
+Map_AverageRate_USD:
+Mapping
+LOAD
+    num(DateKey) as DateKey,
+    AverageRate as AverageRate_USD
+FROM [$(vR_QvdExt)L1_MYSQL_factexchangerate.qvd] (qvd)
+WHERE CurrencyKey = 1;
+
+Tbl_Tmp2:
+NoConcatenate
+LOAD
+    ChannelKey,
+    StoreKey,
+    ProductKey,
+    num#(DateKey) as DateKey,
+    BudgetAmount as BudgetAmount_EURO,
+    BudgetAmount * ApplyMap('Map_AverageRate_USD', num#(DateKey), 0) as BudgetAmount_USD
+Resident Tbl_Tmp1
+WHERE RangeSum(BudgetAmount) <> 0;
+Drop Table Tbl_Tmp1;
+
+Store Tbl_Tmp2 into [$(vR_QvdTra)$(vQvd_Nombre).qvd] (qvd);
+Drop Table Tbl_Tmp2;

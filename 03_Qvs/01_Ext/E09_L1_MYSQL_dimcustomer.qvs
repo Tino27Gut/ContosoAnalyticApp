@@ -1,0 +1,36 @@
+Set vQvd_Nombre = L1_MYSQL_dimcustomer;
+
+[$(vQvd_Nombre)]:
+SELECT CustomerKey,
+	GeographyKey,
+	CustomerLabel,
+	Title,
+	FirstName,
+	MiddleName,
+	LastName,
+	NameStyle,
+	BirthDate,
+	MaritalStatus,
+	Suffix,
+	Gender,
+	EmailAddress,
+	YearlyIncome,
+	TotalChildren,
+	NumberChildrenAtHome,
+	Education,
+	Occupation,
+	HouseOwnerFlag,
+	NumberCarsOwned,
+	AddressLine1,
+	AddressLine2,
+	Phone,
+	DateFirstPurchase,
+	CustomerType,
+	CompanyName,
+	ETLLoadID,
+	LoadDate,
+	UpdateDate
+FROM spanish.dimcustomer;
+
+Store [$(vQvd_Nombre)] into [$(vR_QvdExt)$(vQvd_Nombre).qvd] (qvd);
+Drop Table [$(vQvd_Nombre)];

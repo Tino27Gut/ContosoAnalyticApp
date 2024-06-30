@@ -1,0 +1,30 @@
+Set vQvd_Nombre = L2_dimcalendar;
+
+let vFechaIni = Num(MakeDate(2000, 1, 1));
+let vFechaFin = Num(MakeDate(2050, 12, 31));
+
+$(vQvd_Nombre):
+
+Load *,
+	'Q' &Ceil(Month(DateKey) / 3) as Quarter,
+    'H' &Ceil(Month(DateKey) / 3) as Half_Year,
+    DateKey as Date_Num,
+    num(Month) as Month_Num,
+    num(Period) as Period_Num,
+    num(QuarterStart) as QuarterStart_Num
+;
+Load
+	DateKey,
+    Date(DateKey, 'DD/MM/YYYY') AS Date,
+    Year(DateKey) AS Year,
+    Month(DateKey) AS Month,
+    Date(MonthStart(DateKey),'YYYYMM') as Period,
+    QuarterStart(DateKey) as QuarterStart
+;
+
+Load
+	$(vFechaIni) + RecNo() - 1 as DateKey
+AutoGenerate $(vFechaFin) - $(vFechaIni);
+
+Store $(vQvd_Nombre) into [$(vR_QvdTra)$(vQvd_Nombre).qvd] (qvd);
+Drop Table $(vQvd_Nombre);

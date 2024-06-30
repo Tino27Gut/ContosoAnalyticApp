@@ -1,0 +1,74 @@
+Set vQvd_Nombre = L3_factsales;
+
+/*----------------------------*/
+Set vCampos = '
+		num(DateKey) as DateKey,
+        StoreKey,
+        ProductKey,
+        PromotionKey,
+        CurrencyKey,
+        UnitCost,
+        UnitPrice,
+        SalesQuantity,
+        SalesAmount,
+        ReturnQuantity,
+        ReturnAmount,
+        DiscountQuantity,
+        DiscountAmount,
+        TotalCost,
+        GrossMargin,
+        NetMargin';
+
+Tbl_Tmp1:
+    LOAD
+        'Sales' as Fuente,
+        ChannelKey,
+        $(vCampos)        
+    FROM [$(vR_QvdTra)L2_factsales.qvd] (qvd);
+Concatenate
+    LOAD
+        'OnlineSales' as Fuente,
+        $(vCampos),
+        CustomerKey,
+        NumberSalesOrderNumber
+    FROM [$(vR_QvdTra)L2_factonlinesales.qvd] (qvd);
+
+Rename Fields
+		UnitCost to UnitCost_EURO,
+        UnitPrice to UnitPrice_EURO,
+        SalesAmount to SalesAmount_EURO,
+        ReturnAmount to ReturnAmount_EURO,
+        DiscountAmount to DiscountAmount_EURO,
+        TotalCost to TotalCost_EURO,
+        GrossMargin to GrossMargin_EURO,
+        NetMargin to NetMargin_EURO
+;        
+
+/*----------------------------*/
+Map_AverageRate_USD:
+Mapping
+LOAD
+    num(DateKey) as DateKey,
+    AverageRate as AverageRate_USD
+FROM [$(vR_QvdExt)L1_MYSQL_factexchangerate.qvd] (qvd)
+WHERE CurrencyKey = 1;
+
+Tbl_Tmp2:
+NoConcatenate
+Load *,
+	UnitCost_EURO * AverageRate_USD as UnitCost_USD,
+    UnitPrice_EURO * AverageRate_USD as UnitPrice_USD,
+    SalesAmount_EURO * AverageRate_USD as SalesAmount_USD,
+    ReturnAmount_EURO * AverageRate_USD as ReturnAmount_USD,
+    DiscountAmount_EURO * AverageRate_USD as DiscountAmount_USD,
+    TotalCost_EURO * AverageRate_USD as TotalCost_USD,
+    GrossMargin_EURO * AverageRate_USD as GrossMargin_USD,
+    NetMargin_EURO * AverageRate_USD as NetMargin_USD
+;
+Load *,
+	ApplyMap('Map_AverageRate_USD', DateKey, 0) as AverageRate_USD
+Resident Tbl_Tmp1;
+Drop Table Tbl_Tmp1;
+
+Store Tbl_Tmp2 into [$(vR_QvdTra)$(vQvd_Nombre).qvd] (qvd);
+Drop Table Tbl_Tmp2;

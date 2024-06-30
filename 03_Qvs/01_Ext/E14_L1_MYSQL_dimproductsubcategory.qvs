@@ -1,0 +1,15 @@
+Set vQvd_Nombre = L1_MYSQL_dimproductsubcategory;
+
+[$(vQvd_Nombre)]:
+SELECT ProductSubcategoryKey,
+	ProductSubcategoryLabel,
+	ProductSubcategoryName,
+	ProductSubcategoryDescription,
+	ProductCategoryKey,
+	ETLLoadID,
+	LoadDate,
+	UpdateDate
+FROM spanish.dimproductsubcategory;
+
+Store [$(vQvd_Nombre)] into [$(vR_QvdExt)$(vQvd_Nombre).qvd] (qvd);
+Drop Table [$(vQvd_Nombre)];

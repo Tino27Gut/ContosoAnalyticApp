@@ -1,0 +1,22 @@
+Set vQvd_Nombre = L1_MYSQL_dimsalesterritory;
+
+[$(vQvd_Nombre)]:
+SELECT SalesTerritoryKey,
+	GeographyKey,
+	SalesTerritoryLabel,
+	SalesTerritoryName,
+	SalesTerritoryRegion,
+	SalesTerritoryCountry,
+	SalesTerritoryGroup,
+	SalesTerritoryLevel,
+	SalesTerritoryManager,
+	StartDate,
+	EndDate,
+	Status,
+	ETLLoadID,
+	LoadDate,
+	UpdateDate
+FROM spanish.dimsalesterritory;
+
+Store [$(vQvd_Nombre)] into [$(vR_QvdExt)$(vQvd_Nombre).qvd] (qvd);
+Drop Table [$(vQvd_Nombre)];

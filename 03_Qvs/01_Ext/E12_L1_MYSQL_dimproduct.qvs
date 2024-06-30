@@ -1,0 +1,39 @@
+Set vQvd_Nombre = L1_MYSQL_dimproduct;
+
+[$(vQvd_Nombre)]:
+SELECT ProductKey,
+	ProductLabel,
+	ProductName,
+	ProductDescription,
+	ProductSubcategoryKey,
+	Manufacturer,
+	BrandName,
+	ClassID,
+	ClassName,
+	StyleID,
+	StyleName,
+	ColorID,
+	ColorName,
+	`Size`,
+	SizeRange,
+	SizeUnitMeasureID,
+	Weight,
+	WeightUnitMeasureID,
+	UnitOfMeasureID,
+	UnitOfMeasureName,
+	StockTypeID,
+	StockTypeName,
+	UnitCost,
+	UnitPrice,
+	AvailableForSaleDate,
+	StopSaleDate,
+	Status,
+	ImageURL,
+	ProductURL,
+	ETLLoadID,
+	LoadDate,
+	UpdateDate
+FROM spanish.dimproduct;
+
+Store [$(vQvd_Nombre)] into [$(vR_QvdExt)$(vQvd_Nombre).qvd] (qvd);
+Drop Table [$(vQvd_Nombre)];

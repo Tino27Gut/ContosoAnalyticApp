@@ -1,0 +1,43 @@
+Set vQvd_Nombre = L2_dimstore;
+
+$(vQvd_Nombre):
+  LOAD
+      StoreKey,
+      GeographyKey as GeographyKey_Store,
+      StoreManager,
+      StoreType,
+      StoreName,
+      StoreDescription,
+      Status,
+      OpenDate,
+      CloseDate,
+      EntityKey,
+      ZipCode,
+      ZipCodeExtension,
+      StorePhone,
+      StoreFax,
+      AddressLine1 as AddressLine1_Store,
+      AddressLine2 as AddressLine2_Store,
+      CloseReason,
+      EmployeeCount,
+      SellingAreaSize,
+      LastRemodelDate,
+      GeoLocation,
+      Geometry as Geometry_dimstore,
+      ImageUrl
+  FROM [$(vR_QvdExt)L1_MYSQL_dimstore.qvd]
+  (qvd);
+Left Join
+  LOAD
+      GeographyKey as GeographyKey_Store,
+      ContinentName as ContinentName_Store,
+      CityName as CityName_Store,
+      StateProvinceName as StateProvinceName_Store,
+      RegionCountryName as RegionCountryName_Store,
+      Geometry as Geometry_dimgeography
+  FROM [$(vR_QvdExt)L1_MYSQL_dimgeography.qvd]
+  (qvd);
+
+
+Store $(vQvd_Nombre) into [$(vR_QvdTra)$(vQvd_Nombre).qvd] (qvd);
+Drop Table $(vQvd_Nombre);

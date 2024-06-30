@@ -1,0 +1,22 @@
+Set vQvd_Nombre = L1_MYSQL_dimRFM;
+
+[$(vQvd_Nombre)]:
+SELECT CustomerKey,
+	Transac,
+	FirstPurchasedate,
+	LastPurchasedate,
+	TotalRevenue,
+	TileNumR,
+	TileNumF,
+	TileNumM,
+	`R_FLAG`,
+	`F_FLAG`,
+	`M_FLAG`,
+	`RFM_Score`,
+	TAG,
+	ACTIVITY,
+	`ACTIONABLE_TIP`
+FROM spanish.RFM;
+
+Store [$(vQvd_Nombre)] into [$(vR_QvdExt)$(vQvd_Nombre).qvd] (qvd);
+Drop Table [$(vQvd_Nombre)];

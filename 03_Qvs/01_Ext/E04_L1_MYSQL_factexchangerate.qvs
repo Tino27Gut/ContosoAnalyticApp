@@ -1,0 +1,15 @@
+Set vQvd_Nombre = L1_MYSQL_factexchangerate;
+
+[$(vQvd_Nombre)]:
+SELECT ExchangeRateKey,
+	CurrencyKey,
+	DateKey,
+	AverageRate,
+	EndOfDayRate,
+	ETLLoadID,
+	LoadDate,
+	UpdateDate
+FROM spanish.factexchangerate;
+
+Store [$(vQvd_Nombre)] into [$(vR_QvdExt)$(vQvd_Nombre).qvd] (qvd);
+Drop Table [$(vQvd_Nombre)];

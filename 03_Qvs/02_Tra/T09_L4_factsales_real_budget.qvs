@@ -1,0 +1,46 @@
+Set vQvd_Nombre = L4_factsales_real_budget;
+
+Tbl_Tmp1:
+    LOAD
+        Fuente,
+        ChannelKey,
+        DateKey,
+        StoreKey,
+        ProductKey,
+        PromotionKey,
+        CurrencyKey,
+        UnitCost_EURO,
+        UnitPrice_EURO,
+        SalesQuantity,
+        SalesAmount_EURO,
+        ReturnQuantity,
+        ReturnAmount_EURO,
+        DiscountQuantity,
+        DiscountAmount_EURO,
+        TotalCost_EURO,
+        GrossMargin_EURO,
+        NetMargin_EURO,
+        CustomerKey,
+        NumberSalesOrderNumber,
+        AverageRate_USD,
+        UnitCost_USD,
+        UnitPrice_USD,
+        SalesAmount_USD,
+        ReturnAmount_USD,
+        DiscountAmount_USD,
+        TotalCost_USD,
+        GrossMargin_USD,
+        NetMargin_USD
+    FROM [$(vR_QvdTra)L3_factsales.qvd] (qvd);
+Concatenate
+    LOAD
+        ChannelKey,
+        StoreKey,
+        ProductKey,
+        DateKey,
+        BudgetAmount_EURO,
+        BudgetAmount_USD
+    FROM [$(vR_QvdTra)L2_factBudget.qvd] (qvd);
+
+Store Tbl_Tmp1 into [$(vR_QvdTra)$(vQvd_Nombre).qvd] (qvd);
+Drop Table Tbl_Tmp1;

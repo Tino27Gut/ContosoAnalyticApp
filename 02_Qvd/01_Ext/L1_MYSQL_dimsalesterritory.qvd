@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+ <QvdTableHeader>
+   <QvBuildNo>50689</QvBuildNo>
+   <CreatorDoc>528dae06-7707-495e-999f-b835de5ecd17</CreatorDoc>
+   <CreateUtcTime>2024-05-04 21:05:15</CreateUtcTime>
+   <SourceCreateUtcTime></SourceCreateUtcTime>
+   <SourceFileUtcTime></SourceFileUtcTime>
+   <SourceFileSize>-1</SourceFileSize>
+   <StaleUtcTime></StaleUtcTime>
+   <TableName>L1_MYSQL_dimsalesterritory</TableName>
+   <Fields>
+     <QvdFieldHeader>
+       <FieldName>SalesTerritoryKey</FieldName>
+       <BitOffset>0</BitOffset>
+       <BitWidth>9</BitWidth>
+       <Bias>0</Bias>
+       <NumberFormat>
+         <Type>INTEGER</Type>
+         <nDec>0</nDec>
+         <UseThou>1</UseThou>
+         <Fmt>###0</Fmt>
+         <Dec>.</Dec>
+         <Thou></Thou>
+       </NumberFormat>
+       <NoOfSymbols>265</NoOfSymbols>
+       <Offset>0</Offset>
+       <Length>1325</Length>
+       <Comment></Comment>
+       <Tags>
+         <String>$numeric</String>
+         <String>$integer</String>
+       </Tags>
+     </QvdFieldHeader>
+     <QvdFieldHeader>
+       <FieldName>GeographyKey</FieldName>
+       <BitOffset>24</BitOffset>
+       <BitWidth>9</BitWidth>
+       <Bias>0</Bias>
+       <NumberFormat>
+         <Type>INTEGER</Type>
+         <nDec>0</nDec>
+         <UseThou>1</UseThou>
+         <Fmt>###0</Fmt>
+         <Dec>.</Dec>
+         <Thou></Thou>
+       </NumberFormat>
+       <NoOfSymbols>265</NoOfSymbols>
+       <Offset>1325</Offset>
+       <Length>1325</Length>
+       <Comment></Comment>
+       <Tags>
+         <String>$numeric</String>
+         <String>$integer</String>
+       </Tags>
+     </QvdFieldHeader>
+     <QvdFieldHeader>
+       <FieldName>SalesTerritoryLabel</FieldName>
+       <BitOffset>33</BitOffset>
+       <BitWidth>9</BitWidth>
+       <Bias>0</Bias>
+       <NumberFormat>
+         <Type>ASCII</Type>
+         <nDec>0</nDec>
+         <UseThou>0</UseThou>
+         <Fmt></Fmt>
+         <Dec></Dec>
+         <Thou></Thou>
+       </NumberFormat>
+       <NoOfSymbols>265</NoOfSymbols>
+       <Offset>2650</Offset>
+       <Length>2915</Length>
+       <Comment></Comment>
+       <Tags>
+         <String>$ascii</String>
+         <String>$text</String>
+       </Tags>
+     </QvdFieldHeader>
+     <QvdFieldHeader>
+       <FieldName>SalesTerritoryName</FieldName>
+       <BitOffset>42</BitOffset>
+       <BitWidth>9</BitWidth>
+       <Bias>0</Bias>
+       <NumberFormat>
+         <Type>ASCII</Type>
+         <nDec>0</nDec>
+         <UseThou>0</UseThou>
+         <Fmt></Fmt>
+         <Dec></Dec>
+         <Thou></Thou>
+       </NumberFormat>
+       <NoOfSymbols>265</NoOfSymbols>
+       <Offset>5565</Offset>
+       <Length>2781</Length>
+       <Comment></Comment>
+       <Tags>
+         <String>$text</String>
+       </Tags>
+     </QvdFieldHeader>
+     <QvdFieldHeader>
+       <FieldName>SalesTerritoryRegion</FieldName>
+       <BitOffset>16</BitOffset>
+       <BitWidth>8</BitWidth>
+       <Bias>0</Bias>
+       <NumberFormat>
+         <Type>ASCII</Type>
+         <nDec>0</nDec>
+         <UseThou>0</UseThou>
+         <Fmt></Fmt>
+         <Dec></Dec>
+         <Thou></Thou>
+       </NumberFormat>
+       <NoOfSymbols>80</NoOfSymbols>
+       <Offset>8346</Offset>
+       <Length>1077</Length>
+       <Comment></Comment>
+       <Tags>
+         <String>$text</String>
+       </Tags>
+     </QvdFieldHeader>
+     <QvdFieldHeader>
+       <FieldName>SalesTerritoryCountry</FieldName>
+       <BitOffset>10</BitOffset>
+       <BitWidth>6</BitWidth>
+       <Bias>0</Bias>
+       <NumberFormat>
+         <Type>ASCII</Type>
+         <nDec>0</nDec>
+         <UseThou>0</UseThou>
+         <Fmt></Fmt>
+         <Dec></Dec>
+         <Thou></Thou>
+       </NumberFormat>
+       <NoOfSymbols>33</NoOfSymbols>
+       <Offset>9423</Offset>
+       <Length>333</Length>
+       <Comment></Comment>
+       <Tags>
+         <String>$text</String>
+       </Tags>
+     </QvdFieldHeader>
+     <QvdFieldHeader>
+       <FieldName>SalesTerritoryGroup</FieldName>
+       <BitOffset>60</BitOffset>
+       <BitWidth>4</BitWidth>
+       <Bias>0</Bias>
+       <NumberFormat>
+         <Type>ASCII</Type>
+         <nDec>0</nDec>
+         <UseThou>0</UseThou>
+         <Fmt></Fmt>
+         <Dec></Dec>
+         <Thou></Thou>
+       </NumberFormat>
+       <NoOfSymbols>3</NoOfSymbols>
+       <Offset>9756</Offset>
+       <Length>34</Length>
+       <Comment></Comment>
+       <Tags>
+         <String>$text</String>
+       </Tags>
+     </QvdFieldHeader>
+     <QvdFieldHeader>
+       <FieldName>SalesTerritoryLevel</FieldName>
+       <BitOffset>0</BitOffset>
+       <BitWidth>0</BitWidth>
+       <Bias>0</Bias>
+       <NumberFormat>
+         <Type>ASCII</Type>
+         <nDec>0</nDec>
+         <UseThou>0</UseThou>
+         <Fmt></Fmt>
+         <Dec></Dec>
+         <Thou></Thou>
+       </NumberFormat>
+       <NoOfSymbols>1</NoOfSymbols>
+       <Offset>9790</Offset>
+       <Length>3</Length>
+       <Comment></Comment>
+       <Tags>
+         <String>$ascii</String>
+         <String>$text</String>
+       </Tags>
+     </QvdFieldHeader>
+     <QvdFieldHeader>
+       <FieldName>SalesTerritoryManager</FieldName>
+       <BitOffset>51</BitOffset>
+       <BitWidth>9</BitWidth>
+       <Bias>0</Bias>
+       <NumberFormat>
+         <Type>INTEGER</Type>
+         <nDec>0</nDec>
+         <UseThou>1</UseThou>
+         <Fmt>###0</Fmt>
+         <Dec>.</Dec>
+         <Thou></Thou>
+       </NumberFormat>
+       <NoOfSymbols>264</NoOfSymbols>
+       <Offset>9793</Offset>
+       <Length>1320</Length>
+       <Comment></Comment>
+       <Tags>
+         <String>$numeric</String>
+         <String>$integer</String>
+       </Tags>
+     </QvdFieldHeader>
+     <QvdFieldHeader>
+       <FieldName>StartDate</FieldName>
+       <BitOffset>0</BitOffset>
+       <BitWidth>0</BitWidth>
+       <Bias>0</Bias>
+       <NumberFormat>
+         <Type>TIMESTAMP</Type>
+         <nDec>0</nDec>
+         <UseThou>0</UseThou>
+         <Fmt>M/D/YYYY h:mm:ss[.fff] TT</Fmt>
+         <Dec></Dec>
+         <Thou></Thou>
+       </NumberFormat>
+       <NoOfSymbols>1</NoOfSymbols>
+       <Offset>11113</Offset>
+       <Length>9</Length>
+       <Comment></Comment>
+       <Tags>
+         <String>$numeric</String>
+         <String>$timestamp</String>
+       </Tags>
+     </QvdFieldHeader>
+     <QvdFieldHeader>
+       <FieldName>EndDate</FieldName>
+       <BitOffset>9</BitOffset>
+       <BitWidth>1</BitWidth>
+       <Bias>-2</Bias>
+       <NumberFormat>
+         <Type>TIMESTAMP</Type>
+         <nDec>0</nDec>
+         <UseThou>0</UseThou>
+         <Fmt>M/D/YYYY h:mm:ss[.fff] TT</Fmt>
+         <Dec></Dec>
+         <Thou></Thou>
+       </NumberFormat>
+       <NoOfSymbols>0</NoOfSymbols>
+       <Offset>11122</Offset>
+       <Length>0</Length>
+       <Comment></Comment>
+       <Tags></Tags>
+     </QvdFieldHeader>
+     <QvdFieldHeader>
+       <FieldName>Status</FieldName>
+       <BitOffset>0</BitOffset>
+       <BitWidth>0</BitWidth>
+       <Bias>0</Bias>
+       <NumberFormat>
+         <Type>ASCII</Type>
+         <nDec>0</nDec>
+         <UseThou>0</UseThou>
+         <Fmt></Fmt>
+         <Dec></Dec>
+         <Thou></Thou>
+       </NumberFormat>
+       <NoOfSymbols>1</NoOfSymbols>
+       <Offset>11122</Offset>
+       <Length>8</Length>
+       <Comment></Comment>
+       <Tags>
+         <String>$ascii</String>
+         <String>$text</String>
+       </Tags>
+     </QvdFieldHeader>
+     <QvdFieldHeader>
+       <FieldName>ETLLoadID</FieldName>
+       <BitOffset>0</BitOffset>
+       <BitWidth>0</BitWidth>
+       <Bias>0</Bias>
+       <NumberFormat>
+         <Type>INTEGER</Type>
+         <nDec>0</nDec>
+         <UseThou>1</UseThou>
+         <Fmt>###0</Fmt>
+         <Dec>.</Dec>
+         <Thou></Thou>
+       </NumberFormat>
+       <NoOfSymbols>1</NoOfSymbols>
+       <Offset>11130</Offset>
+       <Length>5</Length>
+       <Comment></Comment>
+       <Tags>
+         <String>$numeric</String>
+         <String>$integer</String>
+       </Tags>
+     </QvdFieldHeader>
+     <QvdFieldHeader>
+       <FieldName>LoadDate</FieldName>
+       <BitOffset>0</BitOffset>
+       <BitWidth>0</BitWidth>
+       <Bias>0</Bias>
+       <NumberFormat>
+         <Type>TIMESTAMP</Type>
+         <nDec>0</nDec>
+         <UseThou>0</UseThou>
+         <Fmt>M/D/YYYY h:mm:ss[.fff] TT</Fmt>
+         <Dec></Dec>
+         <Thou></Thou>
+       </NumberFormat>
+       <NoOfSymbols>1</NoOfSymbols>
+       <Offset>11135</Offset>
+       <Length>5</Length>
+       <Comment></Comment>
+       <Tags>
+         <String>$numeric</String>
+         <String>$integer</String>
+         <String>$timestamp</String>
+         <String>$date</String>
+       </Tags>
+     </QvdFieldHeader>
+     <QvdFieldHeader>
+       <FieldName>UpdateDate</FieldName>
+       <BitOffset>0</BitOffset>
+       <BitWidth>0</BitWidth>
+       <Bias>0</Bias>
+       <NumberFormat>
+         <Type>TIMESTAMP</Type>
+         <nDec>0</nDec>
+         <UseThou>0</UseThou>
+         <Fmt>M/D/YYYY h:mm:ss[.fff] TT</Fmt>
+         <Dec></Dec>
+         <Thou></Thou>
+       </NumberFormat>
+       <NoOfSymbols>1</NoOfSymbols>
+       <Offset>11140</Offset>
+       <Length>5</Length>
+       <Comment></Comment>
+       <Tags>
+         <String>$numeric</String>
+         <String>$integer</String>
+         <String>$timestamp</String>
+         <String>$date</String>
+       </Tags>
+     </QvdFieldHeader>
+   </Fields>
+   <Compression></Compression>
+   <RecordByteSize>8</RecordByteSize>
+   <NoOfRecords>265</NoOfRecords>
+   <Offset>11145</Offset>
+   <Length>2120</Length>
+   <Lineage></Lineage>
+   <Comment></Comment>
+   <EncryptionInfo></EncryptionInfo>
+   <TableTags></TableTags>
+   <ProfilingData></ProfilingData>
+ </QvdTableHeader>
+                         	   
+                                                                      !   "   #   $   %   &   '   (   )   *   +   -   .   /   0   1   2   3   4   5   6   7   8   9   :   ;   <   =   >   ?   @   A   B   C   D   E   F   G   H   I   J   K   L   M   N   O   P   Q   R   S   T   U   V   W   X   Y   Z   [   \   ]   ^   _   `   a   b   c   d   e   f   g   h   i   j   k   l   n   o   p   q   r   s   t   u   v   w   x   y   z   {   |   }   ~      Ä   Å   Ç   Ñ   Ö   Ü   á   à   â   ä   ã   å   ç   é   è   ê   ë   í   ì   î   ï   ñ   ó   ò   ô   ö   õ   ú   ù   û   ü   †   °   ¢   £   §   •   ß   ®   ©   ™   ´   ¨   ≠   Æ   Ø   ∞   ±   ≤   ≥   ¥   ∂   ∑   ∏   π   ∫   ª   º   Ω   æ   ø   ¿   ¡   ¬   √   ƒ   ≈   ∆   «   »   …       À   Ã   Õ   Œ   œ   –   —   ”   ÷   ◊   ÿ   Ÿ   ⁄   €   ‹   ›   ﬁ   ﬂ   ‡   ·   ‚   „   ‰   Â   Ê   Á   Ë   È   Í   Î   Ï   Ì   Ó   Ô      Ò   Ú   Û   Ù   ı   ˆ   ˜   ¯   ˘   ˙   ˚   ¸   ˝   ˛   ˇ                      	  
+                µ  X  ®  •  ?  F  ß  ≠  ≥  -  }  ¢  9  ¶  s  ∞  ,  8  ∂  ;  D  w  G  c  [  )  ü  =  m    2  #  ¨  a    à  H    j  Ö  n  µ  C  ë  †  g  f  Ç  ¶  6  <  ñ  Q  l  ú  o  °  h  b    Å  C  Z    ´  ä  S  •    ù  ≈  õ  /  B  M    E  3  ó  _  1  ?  é  k  U  ©  t  û  \  >  É  ™  Y  '    z  ö  ®  %  '  ;  &  5  è  $  Ü  T  î  7  ê  Ø  {  V  å  .  4  ã    ±  v  J    p  O  r  (  "  ∏  u    d  ]  N  ï  @  ¡  £  L  e    P  ç  :  í  s      W  ^  Ñ  §  K  !  ¥  Ä  0  x  `  y  |  ≤  ∑    ô  +  A  i  I  *      R  ò  ì  â       ~  ˙  Ï  Ô  @  Ê  ˘  Û    ‚  Á    ã  Ò  ı    ˙  ˜  	  ˇ  ˛        Ì    ˚  J    Ú  Ù  Î    „  Ó    ˝  ‡  È    ¯  ˆ  Â  ‰    
+  Í  ·  ÿ  ”  —  Œ  €  Ã  ⁄     ≈  ¸  ƒ  Õ  –  ‹  ﬂ  ‘  “  ’  œ  ÷  »  «  ◊  ›  ∆  À  .  ﬁ  …  á  Æ  q  2  V    Ÿ  ı         010112001 010112002 010112003 010112004 010112005 010112006 010112007 010112008 010112009 010112010 010112011 010112012 010112013 010112014 010112015 010112016 010112017 010101001 010101002 010101003 010101004 010101005 010101006 010101007 010101008 010101009 010101010 010101011 010101012 010101013 010101014 010101015 010101016 010101017 010101018 010101019 010113001 010113002 010113003 010113004 010113005 010113006 010113007 010113009 010113010 010113011 010113012 010113013 010113014 010113015 010113016 010113017 010110001 010110002 010110003 010110004 010110005 010110006 010110007 010110008 010110009 010110010 010110011 010110012 010110013 010110014 010110015 010110016 010110017 010110018 010110019 010110020 010110021 010110022 010110023 010110024 010110025 010110026 010110027 010110028 010110029 010110030 010110031 010103001 010103002 010103003 010103004 010103005 010103006 010103007 010103008 010103009 010103010 010103011 010108001 010108002 010108003 010108004 010108005 010113018 010113019 010113020 010113021 010108006 010108007 010108008 010108009 010108010 010108011 010108012 010107001 010107002 010107003 010107004 010107005 010107006 010107007 010107008 010107009 010107010 010107011 010107012 010107013 010107014 010107015 010107016 010106001 010106002 010106003 010106004 010106005 010106006 010106007 010106008 010106009 010106010 010106011 010106012 010106013 010106014 010106015 010106016 010106017 010106018 010106019 010104001 010104002 010104003 010104004 010104005 010104006 010102001 010102002 010102003 010102004 010102005 010102006 010102007 010102008 010111001 010111002 010111003 010111004 010111005 010111006 010111007 010111008 010109001 010109002 010105001 010105002 010105003 010105004 010105005 010105006 010105007 010105008 010105009 021501001 021502001 021502002 021501002 021501003 021501004 021501005 021501006 021501007 021501008 021501009 021501010 021501011 021501012 020303001 020306001 020307001 020304001 020301001 020305001 020302001 020805001 020806001 020803001 020804001 020802001 020403001 020404001 020407001 020408001 020406002 020408002 020408003 020401001 020401002 020402001 020601001 020201001 021401001 021301001 021201001 021101001 020101001 021001001 020901001 020701001 020501001 031001001 030402001 030401001 030403001 030201001 030303001 030501001 031201001 031301001 021701001 031401001 030801001 030606001 030604001 030605001 030603001 030601001 030602001 030603002 031101001 031102001 030701001 030304001 030305001 030301001 030302001 030102001 030101001 030103001 010201001 010201002 010202001 010203001 010204001 010114001 031501001 021601001 021701002 021701003 020406001 Seattle Kennewick Bellevue Redmond Yakima Granger Sunnyside Toppenish Wapato Cle Elum North Bend Snoqualmie Fall City Renton Everett Veradale Cheney Englewood Wheat Ridge Westminster Grand Junction New Castle Greeley Loveland Lafayette Castle Rock Sedalia Fort Collins Milliken Berthoud Denver Boulder Thornton Littleton Aurora Parker Green Bay Appleton Menasha Oshkosh Milwaukee Waukesha Germantown Port Washington Sheboygan Manitowoc Madison Oregon Stoughton Edgerton Fort Atkinson Racine Houston Midland Russellville Minden Shreveport Marshall Longview Beaumont Naranja Baytown La Porte Bacliff Texas City Pasadena Humble Spring Austin San Antonio Cedar Park Round Rock Dallas Georgetown Hillsboro Arlington Grand Prairie Desoto Richardson Lewisville Denton Fort Worth Plano Miami Jacksonville Tallahassee N√°poles Sebring Lakeland Fort Lauderdale Orlando Tampa Key West Cabo Ca√±averal Albania Nueva York Rochester Siracusa Buffalo Spokane Fond du lac Burlington East Troy Plattsburgh Brooklyn Oswego Ithaca Queens Elmira Poestenkill Trenton Newark Jersey City Paterson Clifton East Orange Passaic Bayonne Vineland New Brunswick Hackensack Atlantic City Montclair Hoboken Morristown Cape May Boston Worcester New Bedford Attleboro Lowell Leominster Hingham Quincy Framingham Cambridge Somerville Haverhill Lynn Northampton Holyoke Pittsfield Falmouth Provincetown Nantucket Bangor Bar Harbor Kennebunkport Lewiston Orono South Portland Hartford Bridgeport Waterbury Old Saybrook Darien New Haven Litchfield County New London Norfolk Virginia Beach Winchester Alejandr√≠a Roanoke Charlottesville Fredericksburg Martinsville Greenville Charleston Annapolis Baltimore Howard Ridgely Queen Anne's County Parkville Back River Bethesda North Harford Londres Edimburgo Glasgow York Carlisle Manchester Lancashire West Yorkshire Baildon Cheshire Stockport Liverpool Knotty Ash Leeds Par√≠s Marsella Lyon Toulouse Niza Nantes Estrasburgo Roma Venecia Florencia Tur√≠n Mil√°n Berl√≠n Hofheim estoy Taunus Koln Landstuhl Dusseldorf Ramstein Baumholder Giebelstadt Bamberg Munich √Åmsterdam Copenhague Estocolmo Madrid Liubliana Bucarest Berne Varsovia Valletta Dubl√≠n Atenas Singapur Nueva Delhi Mumbai Kolkata (Calcuta) Thimphu Hong Kong Teher√°n Damasco Bangkok Mosc√∫ Asjabad Islamabad Miyagi Tokio Yokohama Osaka Nagoya Sapporo Kyoto Se√∫l Busan Biskek Shanghai Urumqi Pek√≠n Guangzhou Sidney Erev√°n Canberra Ottawa Toronto Montreal Vancouver Calgary Anchorage Taipei Lisboa San Petersburgo Nizhny Novgorod Saarlouis Washington Colorado Columbia Brit√°nica Wisconsin Maryland Texas Florida Nueva York New Jersey Massachusetts Inglaterra Maine Connecticut Virginia Carolina del Sur Escocia Red de tiro (Par√≠s) Provence-Alpes-C√¥te d'Azur Rhone-Alpes Midi-Pyrenees Alpes Maritimes Pays de la Loire BAS-Rhin Roma Venecia Provincia de Florencia Provincia de Tur√≠n Lombardia Berl√≠n Hesse North Rhine-Westphalia Rhineland-Palatinate Bavaria Noord Holanda Staden Kobenhavn Stockholms Madrid Liubliana Bucuresti Berna Varsovia Valletta Leinster Grecia central y Evvoia Singapur Territorio de la capital de India Maharastra Bengala Occidental Distrito de Thimphu Hong Kong Teher√°n Damasco Krung Thep Moskovskaya oblast Provincia de Ahal Territorio de la capital de Islamabad Tohoku Kanto Kansai Chubu Hokkaido Se√∫l jikhalsi Yeongnam Provincia chuy Shanghai Xinjiang Pek√≠n GuangDong Nueva Gales del Sur Armenia Molonglo Ontario Quebec Alberta Alaska Taiw√°n Regi√≥n de Lisboa Northwestern Nizhny Novgorod Oblast Sarre Estados Unidos Canad√° Reino Unido Francia Italia Alemania los Pa√≠ses Bajos Dinamarca Suecia Espa√±a Eslovenia Rumania Suiza Polonia Malta Irlanda Grecia Singapur India But√°n Gran China Ir√°n Siria Tailandia Rusia Turkmenist√°n Pakist√°n Jap√≥n Corea del Sur Kirguist√°n Australia Armenia Portugal Am√©rica del Norte Europa Asia 4 #   $   %   &   '   (   )   *   +   ,   -   .   /   0   1   2   3   4   B   6   7   8   9   :   ;   <   =   >   ?   @   A   C   D   E   F   G   H   I   J   K   L   M   O   P   Q   R   S   T   U   V   W   X   Y   Z   [   \   ]   ^   _   `   a   b   c   d   e   f   g   h   i   j   k   l   m   n   o   p   q   r   s   t   u   v   w   x   y   z   {   |   }   ~      Ä   Å   Ç   É   Ñ   Ö   Ü   á   à   â   ä   ã   å   ç   é   è   ê   ë   í   ì   î   ï   ñ   ó   ò   ô   ö   õ   ú   ù   û   ü   †   °   ¢   £   §   •   ¶   ß   ®   ©   ™   ´   ¨   ≠   Æ   Ø   ∞   ±   ≤   ≥   ¥   µ   ∂   ∑   ∏   π   ∫   ª   º   Ω   æ   ø   ¿   ¡   ¬   √   ƒ   ≈   ∆   «   »   …       À   Ã   Õ   Œ   œ   –   —   “   ”   ‘   ’   €   ‹   ›   ﬁ   ﬂ   ‡   ·   ‚   „   ‰   Â   Ê   Á   Ë   È   Í   Î   Ï   Ì   Ó   Ô      Ò   Ú   Û   Ù   ˆ   ¯   ˘   ˙   ˚   ¸   ˝   ˛   ˇ                      	  
+                                               !  "  #  $  %  &  '  (  ÷   ◊   ÿ   Ÿ   ⁄   "               ˜   µºº£í„@Actual    Zú  Zú                         
+(   0   8    @ 	  	$H 
+  
+(P   ,X   0`   4h   8p   <x    @Ä  "Dà  $Hê &Lò  (P†  *T®  ,X∞  .\∏  0`¿  2d»  4h–  6lÿ  8p‡  :tË  <x  >|ê    @Ä¯ ! !BÑ " "Dà# #Få$ $Hê% %Jî & &Lò(' 'Nú0( (P†8) )R§@* *T®H+ +V¨P, ,X∞X- -Z¥`. .\∏h/ /^ºp0 0`¿x1 1bƒÄ2 2d»à3 3fÃê4 4h–ò5 5j‘†6 6lÿ®7 7n‹∞8 8p‡∏9 9r‰¿: :tË»; ;vÏ–< <xÿ= =zÙ‡> >|¯Ë? ?~¸@ @Ä ˘A AÇB BÑ	C CÜD DàE Eä!F Få)G Gé1H Hê 9I Ií$AJ Jî(IK Kñ,QL Lò0YM Mö4aN Nú8iO Oû<qP P†@yQ Q¢DÅR R§HâS S¶LëT T®PôU U™T°V V¨X©W WÆ\±X X∞`πY Y≤d¡Z Z¥h…[ [∂l—\ \∏pŸ] ]∫t·^ ^ºxÈ_ _æ|Ò` `¿Ä˘a a¬Ñb bƒà	c  c∆åd d»êe e î!f fÃò)g gŒú1h h–†9i i“§Aj j‘®Ik k÷¨Ql lÿ∞Ym m⁄¥an n‹∏io oﬁºqp p‡¿yq q‚ƒÅr r‰»âs sÊÃët tË–ôu uÍ‘°v vÏÿ©w wÓ‹±x x‡πy yÚ‰¡z zÙË…{ {ˆÏ—| |¯Ÿ} }˙Ù·~ 	~¸¯È 	˛¸ÒÄ 	Ä ˙Å 	ÅÇ 	Ç	
+É 	ÉÑ 	ÑÖ 	Ö
+"Ü 	Ü*á
+á2à 	à!:â 	â%Bä 	ä)Jã 	ã-Rå 	å1Zç 	ç5bé 	é9jè 	è=rê 	ê Azë ë"EÇí í$Iäì ì&Míî î(Qöï ï*U¢ñ ñ,Y™ó ó.]≤ò ò0a∫ô ô2e¬ö ö4i õ õ6m“ú ú8q⁄ù ù:u‚û û<yÍü ü>}Ú† †@Å˙° °BÖ¢ ¢Dâ
+£ £Fç§ §Hë• •Jï"¶ ¶Lô*ß ßNù2® ®P°:© ©R•B™ ™T©J´ ´V≠R¨ ¨X±Z≠ ≠ZµbÆ Æ\πjØ Ø^Ωr∞ ∞`¡z± ±b≈Ç≤
+≤d…ä≥≥fÕí¥¥h—öµ
+µj’¢∂
+∂lŸ™∑
+∑n›≤∏
+∏p·∫π
+πrÂ¬∫
+∫tÈ ª
+ªvÌ“º
+ºxÒ⁄Ω
+Ωzı‚æ
+æ|˘Íø
+ø~˝Ú¿¿Ä˚¡¡Ç¬¬Ñ	√√Üƒƒà≈≈ä#∆∆å+««é3»»ê!;……í%C  î)KÀÀñ-SÃÃò1[ÕÕö5cŒŒú9kœœû=s––†A{——¢EÉ““§Iã” ”¶Mì‘ ‘®Qõ’ ’™U£÷!÷¨Y´◊"◊Æ]≥ÿ #ÿ∞aªŸ$$Ÿ≤e√⁄(%⁄¥iÀ€,&€∂m”‹0'‹∏q€›4(›∫u„ﬁ8)ﬁºyÎﬂ<*ﬂæ}Û‡@+‡¿Å˚·D,·¬Ö'‚H-‚ƒâ'„H.„∆ç'‰H/‰»ë'ÂL0Â ï#'ÊP1ÊÃô+'ÁT2ÁŒù3'ËX3Ë–°;'È\4È“•C'Í`5Í‘©KÎd6Î÷≠S'Ïh7Ïÿ±['Ìl8Ì⁄µc'Ól9Ó‹πk'Ôl9ÔﬁΩs'l:‡¡{'Òl;Ò‚≈É'Úl<Ú‰…ã'Ûl:ÛÊÕì'Ùp=ÙË—õ'ıp>ıÍ’£'ˆt?ˆÏŸ´'˜P@˜Ó›≥'¯PA¯·ª'˘PB˘ÚÂ√'˙PC˙ÙÈÀ'˚xD˚ˆÌ”'¸|E¸¯Ò€'˝xF˝˙ı„'˛G˛¸˘ÎˇGˇ˛˝Û H ¸I
+JQK	(ÅL$aM,aN4O"<

@@ -1,0 +1,28 @@
+Set vQvd_Nombre = L1_MYSQL_factonlinesales;
+
+[$(vQvd_Nombre)]:
+SELECT OnlineSalesKey,
+	DateKey,
+	StoreKey,
+	ProductKey,
+	PromotionKey,
+	CurrencyKey,
+	CustomerKey,
+	SalesOrderLineNumber,
+	SalesQuantity,
+	SalesAmount,
+	ReturnQuantity,
+	ReturnAmount,
+	DiscountQuantity,
+	DiscountAmount,
+	TotalCost,
+	UnitCost,
+	UnitPrice,
+	ETLLoadID,
+	LoadDate,
+	UpdateDate,
+	SalesOrderNumber
+FROM spanish.factonlinesales;
+
+Store [$(vQvd_Nombre)] into [$(vR_QvdExt)$(vQvd_Nombre).qvd] (qvd);
+Drop Table [$(vQvd_Nombre)];

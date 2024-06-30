@@ -1,0 +1,36 @@
+Set vQvd_Nombre = L1_MYSQL_dimdate;
+
+[$(vQvd_Nombre)]:
+SELECT Datekey,
+	FullDateLabel,
+	DateDescription,
+	CalendarYear,
+	CalendarYearLabel,
+	CalendarHalfYear,
+	CalendarHalfYearLabel,
+	CalendarQuarter,
+	CalendarQuarterLabel,
+	CalendarMonth,
+	CalendarMonthLabel,
+	CalendarWeek,
+	CalendarWeekLabel,
+	CalendarDayOfWeek,
+	CalendarDayOfWeekLabel,
+	FiscalYear,
+	FiscalYearLabel,
+	FiscalHalfYear,
+	FiscalHalfYearLabel,
+	FiscalQuarter,
+	FiscalQuarterLabel,
+	FiscalMonth,
+	FiscalMonthLabel,
+	IsWorkDay,
+	IsHoliday,
+	HolidayName,
+	EuropeSeason,
+	NorthAmericaSeason,
+	AsiaSeason
+FROM spanish.dimdate;
+
+Store [$(vQvd_Nombre)] into [$(vR_QvdExt)$(vQvd_Nombre).qvd] (qvd);
+Drop Table [$(vQvd_Nombre)];

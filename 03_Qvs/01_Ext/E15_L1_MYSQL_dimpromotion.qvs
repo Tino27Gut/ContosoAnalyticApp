@@ -1,0 +1,21 @@
+Set vQvd_Nombre = L1_MYSQL_dimpromotion;
+
+[$(vQvd_Nombre)]:
+SELECT PromotionKey,
+	PromotionLabel,
+	PromotionName,
+	PromotionDescription,
+	DiscountPercent,
+	PromotionType,
+	PromotionCategory,
+	StartDate,
+	EndDate,
+	MinQuantity,
+	MaxQuantity,
+	ETLLoadID,
+	LoadDate,
+	UpdateDate
+FROM spanish.dimpromotion;
+
+Store [$(vQvd_Nombre)] into [$(vR_QvdExt)$(vQvd_Nombre).qvd] (qvd);
+Drop Table [$(vQvd_Nombre)];

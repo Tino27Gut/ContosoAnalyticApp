@@ -1,0 +1,42 @@
+Set vQvd_Nombre = L2_factsales;
+
+Set vCampos = '
+	/*--------------------------------------------*/
+    channelKey,
+    StoreKey,
+    ProductKey,
+    PromotionKey,
+    CurrencyKey,
+    /*--------------------------------------------*/
+    UnitCost,
+    UnitPrice';
+
+$(vQvd_Nombre):
+LOAD *,
+    GrossMargin - DiscountAmount as NetMargin
+;
+LOAD
+	num(MonthStart(DateKey)) as DateKey,
+	$(vCampos),
+    
+    $(vF_Sum(SalesQuantity)),
+    $(vF_Sum(SalesAmount)),
+	
+    sum(ReturnQuantity) as ReturnQuantity,
+    sum(ReturnAmount) as ReturnAmount,
+    
+    sum(DiscountQuantity) as DiscountQuantity,
+    sum(DiscountAmount) as DiscountAmount,
+    
+    sum(TotalCost) as TotalCost,
+    
+    sum(SalesAmount - TotalCost - ReturnAmount) as GrossMargin
+FROM [$(vR_QvdExt)L1_MYSQL_factsales.qvd] (qvd)
+Group By
+	MonthStart(DateKey),
+    $(vCampos);
+    
+Rename Field channelKey to ChannelKey;
+    
+Store $(vQvd_Nombre) into [$(vR_QvdTra)$(vQvd_Nombre).qvd] (qvd);
+Drop Table $(vQvd_Nombre);

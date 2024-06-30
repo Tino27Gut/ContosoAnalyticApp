@@ -1,0 +1,43 @@
+Set vQvd_Nombre = L2_factonlinesales;
+
+Set vCampos = '
+	StoreKey,
+    ProductKey,
+    PromotionKey,
+    CurrencyKey,
+    CustomerKey,
+    
+    UnitCost,
+    UnitPrice';
+    
+$(vQvd_Nombre):
+LOAD *,
+	GrossMargin - DiscountAmount as NetMargin
+;    
+LOAD *,
+	SalesAmount - TotalCost - ReturnAmount as GrossMargin
+;	
+LOAD
+    num(MonthStart(DateKey)) as DateKey,
+    
+    $(vCampos),
+    
+    $(vF_Count(SalesOrderNumber, NumberSalesOrderNumber)),
+    
+    $(vF_Sum(SalesQuantity)),
+    $(vF_Sum(SalesAmount)),
+    
+    $(vF_Sum(ReturnQuantity)),
+    $(vF_Sum(ReturnAmount)),
+    
+    $(vF_Sum(DiscountQuantity)),
+    $(vF_Sum(DiscountAmount)),
+    
+    $(vF_Sum(TotalCost))
+FROM [$(vR_QvdExt)L1_MYSQL_factonlinesales.qvd] (qvd)
+Group By
+	num(MonthStart(DateKey)),
+    $(vCampos);
+
+Store $(vQvd_Nombre) into [$(vR_QvdTra)$(vQvd_Nombre).qvd] (qvd);
+Drop Table $(vQvd_Nombre);
